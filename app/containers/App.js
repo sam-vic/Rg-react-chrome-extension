@@ -9,6 +9,7 @@ export default class App extends Component {
       <div className={style.normal}>
         <Header />
         <MainSection />
+        <Footer />
       </div>
     );
   }
