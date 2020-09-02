@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import style from './MainSection.css';
 
 export default class MainSection extends Component {
