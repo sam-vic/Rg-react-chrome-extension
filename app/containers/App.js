@@ -7,7 +7,7 @@ import style from './App.css';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className={style.background}>
         <Header />
         <MainSection />
         <Footer />
