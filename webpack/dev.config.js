@@ -45,30 +45,36 @@ const baseDevConfig = () => ({
     extensions: ['*', '.js', '.jsx']
   },
   module: {
-    rules: [{
-      test: /\.jsx?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-      options: {
-        presets: ['react-hmre']
-      }
-    }, {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-        {
-          loader: 'postcss-loader',
-          options: {
-            plugins: () => [autoprefixer]
-          }
+    rules: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          presets: ['react-hmre']
         }
-      ]
-    }, {
-      test: /\.(png|jpe?g|gif)$/i,
-      use: [
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           {
-          loader: 'file-loader',
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            }
           }
         ]
       }
