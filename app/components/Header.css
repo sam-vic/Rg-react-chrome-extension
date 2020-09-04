@@ -1,14 +1,10 @@
-.title {
+.page {
     width: 100%;
-    font-size: 30px;
-    font-weight: 100;
-    text-align: center;
-    background: transparent;
-    height: 100px;
-    align-items: center;
+    display: flex;
+    height: 300px;
 }
-
 .logo {
-    width: 100px !important;
-    height: 100px !important;
+    width: 99px;
+    height: 24px;
+    margin: auto;
 }
