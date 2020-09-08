@@ -1,0 +1,22 @@
+.main {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.input {
+    border: none;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.30);
+    border-bottom-width: 2.5px;
+    background: transparent;
+    width: 281px;
+    height: 35px;
+    color: #ffff;
+    font-size: 16px;
+    outline: none;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 0px 1000px #191818 inset;
+    -webkit-text-fill-color: white;
+    -webkit-autofill: none;
+}
